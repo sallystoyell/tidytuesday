@@ -57,11 +57,11 @@ The data dictionaries (codebooks) for each of these are available on the [Tidy T
 
 **5. Back to maps, [this one](https://twitter.com/drob/status/1383077056242712585) looks super cool but super tricky. It's plotting the active post offices in the US over time. [This one](https://twitter.com/GDataScience1/status/1383142111999000578) is similar. **
 
+* [Here's](https://github.com/dgrtwo/data-screencasts/blob/master/2021_04_13_post_offices.Rmd) the code for the first one and [here's](https://github.com/gdatascience/tidytuesday/blob/master/2021/2021_04_13_tidy_tuesday.Rmd) the code for the second.
 * If this is too Andy-level for us, some simpler versions of this might be: 
     + Plot the post offices *established* over time.
     + Plot just the number of post offices established vs. time on a plot (no map)
 
-* [Here's](https://github.com/dgrtwo/data-screencasts/blob/master/2021_04_13_post_offices.Rmd) the code for the first one and [here's](https://github.com/gdatascience/tidytuesday/blob/master/2021/2021_04_13_tidy_tuesday.Rmd) the code for the second.
 
 <br />
 
