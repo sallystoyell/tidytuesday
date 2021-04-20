@@ -1,0 +1,74 @@
+---
+title: "Tidy Tuesday"
+subtitle: "April 22, 2021"
+css: "tidytuesday.css"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+<br /><br />
+
+As Andy mentioned, a couple weeks ago the TidyTuesday data was on post offices and it might be fun to create some maps! Part of the fun of TidyTuesday is that people post their results (and a lot of the time their actual code) on Twitter. I've compiled some cool tweets related to this dataset and thought we could re-create them!
+
+The data we will use are available on the official [Tidy Tuesday website](https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-02-16/readme.md). 
+
+You can import these data using the `read_csv()` function from the `{tidyverse}` package. 
+
+```{r eval=FALSE}
+# Load library
+library(tidyverse)
+# Import the dataset
+post_offices <- read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-04-13/post_offices.csv')
+```
+
+You will get a parsing failure but it should have read in ok.
+
+The data dictionaries (codebooks) for each of these are available on the [Tidy Tuesday site](https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-04-13/readme.md). 
+
+<br /><br />
+
+
+# Problems
+
+
+<br />
+
+**1. Many of the tweets plot information on a US map. Plot where post offices were established in 1950 to get the hang of how to do this.** 
+
+* (Hint: the package `{maps}` has a function `map_data()` that can be used to get the states. This can then be plotted in ggplot using geom_polygon() with the latitude and longitudes. You can then plot the post offices using their latitude and longitudes. This is a helpful blog post: https://www.datanovia.com/en/blog/how-to-create-a-map-using-ggplot2/)
+
+<br />
+
+**2. Re-create [this](https://twitter.com/thomas_mock/status/1381794316016836612/photo/4) map of the post offices in the US in 1850 (or pick your favorite year!)**
+
+<br />
+
+**3. Re-create [this](https://twitter.com/Louis_Caruana/status/1384212603409297408/photo/1) map of the longest running post offices.**
+ 
+* (If you want to cheat, [here](https://github.com/LouisCaruana/TidyTuesday/blob/master/20210413_USPostOffices/20210413_USPostOffices.md) is the code he used)
+
+<br />
+
+**4. If you'd rather not deal with maps, re-create [this](https://twitter.com/henrywrover2/status/1381954522612965377/photo/1) plot of when post offices were established and discontinued.** 
+
+
+<br />
+
+**5. Back to maps, [this one](https://twitter.com/drob/status/1383077056242712585) looks super cool but super tricky. It's plotting the active post offices in the US over time. [This one](https://twitter.com/GDataScience1/status/1383142111999000578) is similar. **
+
+* If this is too Andy-level for us, some simpler versions of this might be: 
+    + Plot the post offices *established* over time.
+    + Plot just the number of post offices established vs. time on a plot (no map)
+
+* [Here's](https://github.com/dgrtwo/data-screencasts/blob/master/2021_04_13_post_offices.Rmd) the code for the first one and [here's](https://github.com/gdatascience/tidytuesday/blob/master/2021/2021_04_13_tidy_tuesday.Rmd) the code for the second.
+
+<br />
+
+**5. Make something even more creative!**
+
+* Ideas
+    + Someone on twitter noted there's an elevation variable. Could you plot something to do with the highest and lowest post offices?
+    + What are the shortest running post offices?
+    
+<br />
